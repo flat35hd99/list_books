@@ -81,8 +81,7 @@ const Scanner = ({
                 //     onDetected(result);
                 // }
 
-                const API_URL = 'https://192.168.11.9';
-                fetch(`${API_URL}/book`, {
+                fetch('/book', {
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json",
