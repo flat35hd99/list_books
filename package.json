@@ -37,7 +37,7 @@
     "react-hot-loader": "^4.12.21",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^4.11.1"
   },
   "snyk": true
 }
