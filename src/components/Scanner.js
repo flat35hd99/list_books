@@ -17,6 +17,19 @@ function getMedianOfCodeErrors(decodedCodes) {
     return medianOfErrors;
 }
 
+export function postCode(code) {
+    fetch('/book', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "id": code,
+        })
+    });
+    alert(`Book ID: ${code} has been sent!`);
+}
+
 const defaultConstraints = {
     width: 640,
     height: 480,
@@ -81,16 +94,7 @@ const Scanner = ({
                 //     onDetected(result);
                 // }
 
-                fetch('/book', {
-                    method: 'POST',
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        "id": result.codeResult.code,
-                    })
-                });
-                alert(`Book ID: ${result.codeResult.code} is returned!`);
+                postCode(result.codeResult.code);
             }
         }
     };
